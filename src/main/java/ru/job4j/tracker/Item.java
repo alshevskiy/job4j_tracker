@@ -11,7 +11,7 @@ public class Item {
         this.name = name;
     }
 
-    public Item(String name, int id) {
+    public Item(int id, String name) {
         this.name = name;
         this.id = id;
     }
