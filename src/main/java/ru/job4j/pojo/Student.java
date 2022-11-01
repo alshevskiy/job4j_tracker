@@ -2,16 +2,16 @@ package ru.job4j.pojo;
 
 public class Student {
 
-    private String fullName;
+    private String name;
     private String group;
     private String date;
 
-    public String getFullName() {
-        return fullName;
+    public String getName() {
+        return name;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getGroup() {
