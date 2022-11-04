@@ -53,6 +53,8 @@ public class Tracker {
             item.setId(id);
             items[index] = item;
             rsl = true;
+        } else {
+            System.out.println("Index is not found");
         }
         return rsl;
     }
@@ -65,6 +67,8 @@ public class Tracker {
             items[size - 1] = null;
             size--;
             rsl = true;
+        } else {
+            System.out.println("Index is not found");
         }
         return rsl;
     }
