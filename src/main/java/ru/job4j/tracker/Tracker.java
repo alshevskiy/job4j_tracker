@@ -27,8 +27,7 @@ public class Tracker {
                 number++;
             }
         }
-        rsl = Arrays.copyOf(rsl, number);
-        return rsl;
+        return Arrays.copyOf(rsl, number);
     }
 
     public Item findById(int id) {
