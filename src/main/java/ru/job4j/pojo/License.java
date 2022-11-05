@@ -1,5 +1,6 @@
 package ru.job4j.pojo;
 
+import java.lang.runtime.ObjectMethods;
 import java.util.Date;
 import java.util.Objects;
 
@@ -50,7 +51,8 @@ public class License {
             return false;
         }
         License license = (License) o;
-        return Objects.equals(code, license.code);
+        return Objects.equals(code, license.code) && Objects.equals(owner, license.owner)
+                && Objects.equals(model, license.model) && Objects.equals(created, license.created);
     }
 
     @Override
