@@ -4,16 +4,16 @@ public class Bus implements Transport {
 
     @Override
     public void drive() {
-
+        boolean engine = true;
     }
 
     @Override
-    public void passangers(int value) {
-
+    public void passengers(int value) {
+        boolean all = true;
     }
 
     @Override
     public double refuel(int fuel) {
-        return 0;
+        return 100 - fuel;
     }
 }
