@@ -4,21 +4,21 @@ public class UserStore {
 
     public static User findUser(User[] users, String login) throws UserNotFoundException {
         User user = null;
-        for (int i = 0; i < users.length; i++) {
-            if (login.equals(users[i].getUsername())) {
-                user = users[i];
+        for (User value : users) {
+            if (login.equals(value.getUsername())) {
+                user = value;
                 break;
             }
         }
         if (user == null) {
-            throw new UserNotFoundException();
+            throw new UserNotFoundException("User is not found");
         }
         return user;
     }
 
     public static boolean validate(User user) throws UserInvalidException {
         if (!user.isValid() || user.getUsername().length() < 4) {
-            throw new UserInvalidException();
+            throw new UserInvalidException("Element is not valid");
         }
         return true;
     }
