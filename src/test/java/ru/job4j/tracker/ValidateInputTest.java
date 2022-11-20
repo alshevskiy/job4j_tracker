@@ -50,6 +50,6 @@ public class ValidateInputTest {
         );
         Input input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
-        assertThat(out.toString()).isEqualTo("");
+        assertThat(selected).isEqualTo(-1);
     }
 }
