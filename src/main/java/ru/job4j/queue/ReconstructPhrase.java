@@ -15,11 +15,11 @@ public class ReconstructPhrase {
     private String getDescendingElements() {
         StringBuilder result = new StringBuilder();
 
-        Iterator<Character> iterator = descendingElements.descendingIterator();
-        while (iterator.hasNext()) {
-            result.append(iterator.next());
+        for (Character ch : descendingElements) {
+            result.append(ch);
         }
 
+        result.reverse();
         return result.toString();
     }
 
