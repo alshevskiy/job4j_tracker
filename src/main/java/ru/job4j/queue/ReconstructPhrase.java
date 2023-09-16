@@ -1,7 +1,6 @@
 package ru.job4j.queue;
 
 import java.util.Deque;
-import java.util.Iterator;
 
 public class ReconstructPhrase {
     private final Deque<Character> descendingElements;
@@ -14,12 +13,12 @@ public class ReconstructPhrase {
 
     private String getDescendingElements() {
         StringBuilder result = new StringBuilder();
+        result.ensureCapacity(descendingElements.size());
 
-        for (Character ch : descendingElements) {
-            result.append(ch);
+        for (int i = 0; i < descendingElements.size(); i++) {
+            result.append(descendingElements.pollLast());
         }
 
-        result.reverse();
         return result.toString();
     }
 
